@@ -15,6 +15,7 @@ export default function PostPage() {
     setLoading(false);
   };
 
+  // perform a infinite scroing logic here //
   const handleInfinitScroll = async () => {
     try {
       if (
@@ -30,12 +31,14 @@ export default function PostPage() {
   };
 
   useEffect(() => {
+    // api calling
     getApiCall();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleInfinitScroll);
+    // unsubscribe or clean up the useEffetct
     return () => window.removeEventListener("scroll", handleInfinitScroll);
   }, []);
 
