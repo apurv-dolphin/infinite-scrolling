@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.card-title {
+  margin-bottom: var(--bs-card-title-spacer-y);
+  text-align: initial;
+  display: flex;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 5px;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.card-link {
+  position: absolute;
+  bottom: 12px;
+  margin-left: -50px;
+}
+
+.postId {
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  background: aqua;
+  border-radius: 20px;
+  padding-top: 9px;
+  margin-top: -16px;
+  margin-right: -11px;
+  align-self: self-end;
+}
