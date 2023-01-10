@@ -12,7 +12,7 @@ export default function PostPage() {
     );
     const data = await res.json();
     setPost((prev) => [...prev, ...data]);
-    setLoading(false)
+    setLoading(false);
   };
 
   const handleInfinitScroll = async () => {
@@ -41,6 +41,16 @@ export default function PostPage() {
 
   return (
     <>
+      <h1
+        style={{
+          fontFamily: "Arial, sans-serif",
+          textDecoration: "underline",
+          backgroundColor: "#00fffe"
+        }}
+        className="my-3"
+      >
+        Infinite Scrolling Example
+      </h1>
       <Container>
         <Row>
           {post.map((newPost, index) => (
